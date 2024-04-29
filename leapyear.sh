@@ -1,8 +1,8 @@
 echo "enter the year"
 read a
-if (( $a % 4 == 0 ))
+if (( ($a % 4 == 0 && $a % 100 != 0 ) || $a % 400 == 0 ))
 then
-        echo "the given year is leap"
+    echo "leap year"
 else
-        echo "the given year is not leap"
+    echo "not leap year"
 fi
