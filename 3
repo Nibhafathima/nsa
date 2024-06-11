@@ -1,0 +1,10 @@
+read -p "enter file name: " filename
+while read line
+do
+((++noline))
+set $line>/dev/null
+nowards=`expr $nowords +$#`
+done <$filename
+echo "number of lines= $noline"
+echo "numbet of words= $nowords"
+
